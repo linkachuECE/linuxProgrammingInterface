@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 29 23:14:46 2022
+# Make data base, printed on Sat Jul 30 17:54:20 2022
 
 # Variables
 
@@ -100,7 +100,6 @@ MAKECMDGOALS := all
 SHLVL = 1
 # default
 MAKE_VERSION := 4.2.1
- 
 # environment
 USER = linkachu
 # makefile
@@ -166,9 +165,9 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 2080, inode 52100): 66 files, no impossibilities.
+# . (device 2080, inode 52100): 68 files, no impossibilities.
 
-# 66 files, no impossibilities in 1 directories.
+# 68 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -247,12 +246,12 @@ allgen:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 73 / storage = 625 B / avg = 8 B
-# current buf: size = 8162 B / used = 625 B / count = 73 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 75 / storage = 650 B / avg = 8 B
+# current buf: size = 8162 B / used = 650 B / count = 75 / avg = 8 B
 
-# strcache performance: lookups = 82 / hit rate = 10%
+# strcache performance: lookups = 84 / hit rate = 10%
 # hash-table stats:
-# Load=73/8192=1%, Rehash=0, Collisions=1/82=1%
-# Finished Make data base on Fri Jul 29 23:14:46 2022
+# Load=75/8192=1%, Rehash=0, Collisions=1/84=1%
+# Finished Make data base on Sat Jul 30 17:54:20 2022
 
  
