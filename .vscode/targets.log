@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 23 20:52:38 2022
+# Make data base, printed on Fri Jul 29 23:14:46 2022
 
 # Variables
 
@@ -20,8 +20,6 @@ DIRS = lib acl altio cap cgroups daemons dirs_links filebuff fileio filelock fil
 WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -43,8 +41,6 @@ GNUMAKEFLAGS :=
 # environment
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /mnt/c/Program Files/Microsoft VS Code
@@ -53,13 +49,15 @@ MAKE_HOST := x86_64-pc-linux-gnu
 # makefile (from 'Makefile', line 36)
 BUILD_DIRS = ${DIRS}
 # environment
-PATH = /home/linkachu/.vscode-server/bin/4af164ea3a06f701fe3e89a2bcbb421d2026b68f/bin/remote-cli:/home/linkachu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/MATLAB/R2021b/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/egbra/AppData/Local/Microsoft/WindowsApps:/snap/bin
+PATH = /home/linkachu/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/home/linkachu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/MATLAB/R2021b/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/egbra/AppData/Local/Microsoft/WindowsApps:/snap/bin
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
-VSCODE_LOG_STACK = false
+ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-c211c0c2-adf4-4302-a78d-1cd04039a564.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-3ddafa21-e876-44f1-a4f1-6ef70c431891.sock
+# environment
+VSCODE_SERVER_TAR = /mnt/c/Users/egbra/AppData/Local/Temp/vscode-remote-wsl/3b889b090b5ad5793f524b5d1d39fda662b96a2a/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -69,8 +67,6 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 DISPLAY = :0
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
 PWD = /home/linkachu/linuxProgrammingInterface/tlpi-dist
 # default
 .LOADED := 
@@ -79,7 +75,7 @@ WSL_INTEROP = /run/WSL/9_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = 903e7296-7656-47d8-88dd-9c69f14a32fc
+WT_SESSION = dd60bfa8-6a3b-4586-979c-b2faff7dfbe2
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -89,7 +85,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = linkachu
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -104,6 +100,7 @@ MAKECMDGOALS := all
 SHLVL = 1
 # default
 MAKE_VERSION := 4.2.1
+ 
 # environment
 USER = linkachu
 # makefile
@@ -157,13 +154,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
 WSL_DISTRO_NAME = Ubuntu-20.04
 # environment
 MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=76/1024=7%, Rehash=0, Collisions=4/110=4%
+# Load=73/1024=7%, Rehash=0, Collisions=4/107=4%
 
 # Pattern-specific Variable Values
 
@@ -171,9 +166,9 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 2080, inode 52100): 65 files, no impossibilities.
+# . (device 2080, inode 52100): 66 files, no impossibilities.
 
-# 65 files, no impossibilities in 1 directories.
+# 66 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -223,7 +218,6 @@ Makefile:
 #  Last modified 2022-06-09 01:39:49
 #  File has been updated.
 #  Successfully updated.
- 
 
 # Not a target:
 .DEFAULT:
@@ -253,12 +247,12 @@ allgen:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 72 / storage = 620 B / avg = 8 B
-# current buf: size = 8162 B / used = 620 B / count = 72 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 73 / storage = 625 B / avg = 8 B
+# current buf: size = 8162 B / used = 625 B / count = 73 / avg = 8 B
 
-# strcache performance: lookups = 81 / hit rate = 11%
+# strcache performance: lookups = 82 / hit rate = 10%
 # hash-table stats:
-# Load=72/8192=1%, Rehash=0, Collisions=1/81=1%
-# Finished Make data base on Sat Jul 23 20:52:38 2022
+# Load=73/8192=1%, Rehash=0, Collisions=1/82=1%
+# Finished Make data base on Fri Jul 29 23:14:46 2022
 
  
