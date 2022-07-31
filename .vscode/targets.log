@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 30 21:31:08 2022
+# Make data base, printed on Sun Jul 31 00:14:30 2022
 
 # Variables
 
@@ -55,7 +55,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-e5300c27-eb8d-4174-a087-3a9b6a6d5dd0.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-f9c8ca3d-bc21-4b51-944f-e631d4217df8.sock
 # environment
 VSCODE_SERVER_TAR = /mnt/c/Users/egbra/AppData/Local/Temp/vscode-remote-wsl/3b889b090b5ad5793f524b5d1d39fda662b96a2a/vscode-server-stable-linux-x64.tar.gz
 # default
@@ -252,6 +252,6 @@ allgen:
 # strcache performance: lookups = 84 / hit rate = 10%
 # hash-table stats:
 # Load=75/8192=1%, Rehash=0, Collisions=1/84=1%
-# Finished Make data base on Sat Jul 30 21:31:08 2022
+# Finished Make data base on Sun Jul 31 00:14:30 2022
 
  

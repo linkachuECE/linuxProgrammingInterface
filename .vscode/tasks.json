@@ -8,6 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "${workspaceFolder}/lib/error_functions.c",
                 "-o",
                 "${fileDirname}/bin/${fileBasenameNoExtension}"
             ],
