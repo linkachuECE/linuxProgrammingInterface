@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 31 00:14:30 2022
+# Make data base, printed on Sun Jul 31 17:44:43 2022
 
 # Variables
 
@@ -55,9 +55,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-f9c8ca3d-bc21-4b51-944f-e631d4217df8.sock
-# environment
-VSCODE_SERVER_TAR = /mnt/c/Users/egbra/AppData/Local/Temp/vscode-remote-wsl/3b889b090b5ad5793f524b5d1d39fda662b96a2a/vscode-server-stable-linux-x64.tar.gz
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-d125a3c9-4a34-4027-808e-3f3d36154f06.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -75,7 +73,7 @@ WSL_INTEROP = /run/WSL/9_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = dd60bfa8-6a3b-4586-979c-b2faff7dfbe2
+WT_SESSION = c0942758-09d4-49ed-9b50-0f59cdec1d1f
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -157,7 +155,7 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 # environment
 MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=4/107=4%
+# Load=72/1024=7%, Rehash=0, Collisions=4/106=4%
 
 # Pattern-specific Variable Values
 
@@ -252,6 +250,6 @@ allgen:
 # strcache performance: lookups = 84 / hit rate = 10%
 # hash-table stats:
 # Load=75/8192=1%, Rehash=0, Collisions=1/84=1%
-# Finished Make data base on Sun Jul 31 00:14:30 2022
+# Finished Make data base on Sun Jul 31 17:44:43 2022
 
  

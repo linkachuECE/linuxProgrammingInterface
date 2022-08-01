@@ -3,6 +3,7 @@ make: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist'
 echo lib acl altio cap cgroups daemons dirs_links filebuff fileio filelock files filesys getopt inotify loginacct memalloc mmap pgsjc pipes pmsg proc proccred procexec procpri procres progconc psem pshm pty shlibs signals sockets svipc svmsg svsem svshm sysinfo syslim threads time timers tty users_groups vdso vmem xattr
 for dir in lib acl altio cap cgroups daemons dirs_links filebuff fileio filelock files filesys getopt inotify loginacct memalloc mmap pgsjc pipes pmsg proc proccred procexec procpri procres progconc psem pshm pty shlibs signals sockets svipc svmsg svsem svshm sysinfo syslim threads time timers tty users_groups vdso vmem xattr; do (cd ${dir}; make) ; \
 	if test $? -ne 0; then break; fi; done
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/lib'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o print_rlimit.o print_rlimit.c
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o alt_functions.o alt_functions.c
@@ -29,6 +30,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o print_rusage.o print_rusage.c
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o inet_sockets.o inet_sockets.c
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o unix_sockets.o unix_sockets.c
+ 
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o itimerspec_from_str.o itimerspec_from_str.c
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o region_locking.o region_locking.c
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o cap_functions.o cap_functions.c
@@ -37,10 +39,12 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 rm -f ../libtlpi.a
 ar rs ../libtlpi.a *.o
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/lib'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/acl'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    acl_update.c ../libtlpi.a  ../libtlpi.a -lacl -o acl_update
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    acl_view.c ../libtlpi.a  ../libtlpi.a -lacl -o acl_view
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/acl'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/altio'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    demo_sigio.c ../libtlpi.a   -o demo_sigio
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    poll_pipes.c ../libtlpi.a   -o poll_pipes
@@ -53,6 +57,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -o multithread_epoll_wait multithread_epoll_wait.o \
 	-std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter ../libtlpi.a -pthread
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/altio'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/cap'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    cap_launcher.c ../libtlpi.a  ../libtlpi.a -lcap -lcrypt -o cap_launcher
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    cap_text.c ../libtlpi.a  ../libtlpi.a -lcap -lcrypt -o cap_text
@@ -69,11 +74,13 @@ cc -o alloc_mem alloc_mem.o \
 	-std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter ../libtlpi.a -pthread
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    fork_bomb.c ../libtlpi.a   -o fork_bomb
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/cgroups'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/daemons'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    daemon_SIGHUP.c ../libtlpi.a   -o daemon_SIGHUP
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_syslog.c ../libtlpi.a   -o t_syslog
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    test_become_daemon.c ../libtlpi.a   -o test_become_daemon
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/daemons'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/dirs_links'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    bad_symlink.c ../libtlpi.a   -o bad_symlink
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    file_type_stats.c ../libtlpi.a   -o file_type_stats
@@ -115,21 +122,25 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_utimes.c ../libtlpi.a   -o t_utimes
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    chiflag.c ../libtlpi.a   -o chiflag
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/files'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/filesys'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_statvfs.c ../libtlpi.a   -o t_statvfs
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_statfs.c ../libtlpi.a   -o t_statfs
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_mount.c ../libtlpi.a   -o t_mount
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_umount.c ../libtlpi.a   -o t_umount
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/filesys'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/getopt'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_getopt.c ../libtlpi.a   -o t_getopt
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/getopt'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/inotify'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    demo_inotify.c ../libtlpi.a   -o demo_inotify
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    dnotify.c ../libtlpi.a   -o dnotify
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    inotify_dtree.c ../libtlpi.a   -o inotify_dtree
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    rand_dtree.c ../libtlpi.a   -o rand_dtree
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/inotify'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/loginacct'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    dump_utmpx.c ../libtlpi.a   -o dump_utmpx
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    utmpx_login.c ../libtlpi.a   -o utmpx_login
@@ -138,6 +149,7 @@ make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/l
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/memalloc'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    free_and_sbrk.c ../libtlpi.a   -o free_and_sbrk
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/memalloc'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/mmap'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    anon_mmap.c ../libtlpi.a   -o anon_mmap
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    mmcat.c ../libtlpi.a   -o mmcat
@@ -154,6 +166,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    handling_SIGTSTP.c ../libtlpi.a   -o handling_SIGTSTP
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_setsid.c ../libtlpi.a   -o t_setsid
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/pgsjc'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/pipes'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    change_case.c ../libtlpi.a   -o change_case
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o fifo_seqnum_client.o fifo_seqnum_client.c
@@ -165,6 +178,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    popen_glob.c ../libtlpi.a   -o popen_glob
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    simple_pipe.c ../libtlpi.a   -o simple_pipe
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/pipes'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/pmsg'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    mq_notify_sig.c ../libtlpi.a  ../libtlpi.a -lrt -o mq_notify_sig
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    mq_notify_sigwaitinfo.c ../libtlpi.a  ../libtlpi.a -lrt -o mq_notify_sigwaitinfo
@@ -183,12 +197,15 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    longjmp.c ../libtlpi.a   -o longjmp
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    necho.c ../libtlpi.a   -o necho
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    setjmp_vars.c ../libtlpi.a   -o setjmp_vars
+ 
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_getenv.c ../libtlpi.a   -o t_getenv
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    modify_env.c ../libtlpi.a   -o modify_env
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/proc'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/proccred'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    idshow.c ../libtlpi.a   -o idshow
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/proccred'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/procexec'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    acct_on.c ../libtlpi.a   -o acct_on
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    acct_view.c ../libtlpi.a   -o acct_view
@@ -220,6 +237,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_clone.c ../libtlpi.a   -o t_clone
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    acct_v3_view.c ../libtlpi.a   -o acct_v3_view
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/procexec'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/procpri'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    sched_set.c ../libtlpi.a  ../libtlpi.a  -o sched_set
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    sched_view.c ../libtlpi.a  ../libtlpi.a  -o sched_view
@@ -228,6 +246,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_sched_setaffinity.c ../libtlpi.a  ../libtlpi.a  -o t_sched_setaffinity
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_sched_getaffinity.c ../libtlpi.a  ../libtlpi.a  -o t_sched_getaffinity
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/procpri'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/procres'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    rusage.c ../libtlpi.a   -o rusage
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    rusage_wait.c ../libtlpi.a   -o rusage_wait
@@ -247,12 +266,14 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter -pthread    psem_wait.c ../libtlpi.a  ../libtlpi.a -pthread -o psem_wait
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter -pthread    thread_incr_psem.c ../libtlpi.a  ../libtlpi.a -pthread -o thread_incr_psem
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/psem'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/pshm'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    pshm_create.c ../libtlpi.a  ../libtlpi.a -lrt -o pshm_create
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    pshm_read.c ../libtlpi.a  ../libtlpi.a -lrt -o pshm_read
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    pshm_write.c ../libtlpi.a  ../libtlpi.a -lrt -o pshm_write
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    pshm_unlink.c ../libtlpi.a  ../libtlpi.a -lrt -o pshm_unlink
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/pshm'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/pty'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    script.c ../libtlpi.a   -o script
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    unbuffer.c ../libtlpi.a   -o unbuffer
@@ -262,6 +283,7 @@ make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o dynload.o dynload.c
 cc -o dynload dynload.o -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter ../libtlpi.a -ldl
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/shlibs'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/signals'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    catch_rtsigs.c ../libtlpi.a   -o catch_rtsigs
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    demo_SIGFPE.c ../libtlpi.a   -o demo_SIGFPE
@@ -334,11 +356,13 @@ cc   scm_rights_recv.o ../libtlpi.a   -o scm_rights_recv
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o scm_rights_send.o scm_rights_send.c
 cc   scm_rights_send.o ../libtlpi.a   -o scm_rights_send
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    us_abstract_bind.c ../libtlpi.a   -o us_abstract_bind
+ 
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/sockets'
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svipc'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svmsg_demo_server.c ../libtlpi.a   -o svmsg_demo_server
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_ftok.c ../libtlpi.a   -o t_ftok
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svipc'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svmsg'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svmsg_chqbytes.c ../libtlpi.a   -o svmsg_chqbytes
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o svmsg_file_client.o svmsg_file_client.c
@@ -352,6 +376,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svmsg_info.c ../libtlpi.a   -o svmsg_info
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svmsg_ls.c ../libtlpi.a   -o svmsg_ls
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svmsg'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svsem'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svsem_create.c ../libtlpi.a   -o svsem_create
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svsem_demo.c ../libtlpi.a   -o svsem_demo
@@ -361,6 +386,7 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svsem_setall.c ../libtlpi.a   -o svsem_setall
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svsem_info.c ../libtlpi.a   -o svsem_info
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svsem'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svshm'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svshm_attach.c ../libtlpi.a   -o svshm_attach
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svshm_create.c ../libtlpi.a   -o svshm_create
@@ -374,16 +400,18 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svshm_lock.c ../libtlpi.a   -o svshm_lock
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    svshm_unlock.c ../libtlpi.a   -o svshm_unlock
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/svshm'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/sysinfo'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_uname.c ../libtlpi.a   -o t_uname
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    procfs_pidmax.c ../libtlpi.a   -o procfs_pidmax
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    procfs_user_exe.c ../libtlpi.a   -o procfs_user_exe
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/sysinfo'
-make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/syslim'
  
+make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/syslim'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_fpathconf.c ../libtlpi.a   -o t_fpathconf
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_sysconf.c ../libtlpi.a   -o t_sysconf
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/syslim'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/threads'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter -pthread    detached_attrib.c ../libtlpi.a  ../libtlpi.a -pthread -o detached_attrib
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter -pthread    one_time_init.c ../libtlpi.a  ../libtlpi.a -pthread -o one_time_init
@@ -400,15 +428,16 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter -pthread    thread_lock_speed.c ../libtlpi.a  ../libtlpi.a -pthread -o thread_lock_speed
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter -pthread    thread_multijoin.c ../libtlpi.a  ../libtlpi.a -pthread -o thread_multijoin
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/threads'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/time'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    calendar_time.c ../libtlpi.a   -o calendar_time
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    show_time.c ../libtlpi.a   -o show_time
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    process_time.c ../libtlpi.a   -o process_time
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    strtime.c ../libtlpi.a   -o strtime
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/time'
- 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/timers'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    clock_times.c ../libtlpi.a  ../libtlpi.a -lrt -pthread -o clock_times
+ 
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    cpu_burner.c ../libtlpi.a  ../libtlpi.a -lrt -pthread -o cpu_burner
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    cpu_multi_burner.c ../libtlpi.a  ../libtlpi.a -lrt -pthread -o cpu_multi_burner
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    cpu_multithread_burner.c ../libtlpi.a  ../libtlpi.a -lrt -pthread -o cpu_multithread_burner
@@ -421,18 +450,21 @@ cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    demo_timerfd.c ../libtlpi.a  ../libtlpi.a -lrt -pthread -o demo_timerfd
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_clock_nanosleep.c ../libtlpi.a  ../libtlpi.a -lrt -pthread -o t_clock_nanosleep
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/timers'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/tty'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    demo_SIGWINCH.c ../libtlpi.a   -o demo_SIGWINCH
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    new_intr.c ../libtlpi.a   -o new_intr
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    no_echo.c ../libtlpi.a   -o no_echo
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    test_tty_functions.c ../libtlpi.a   -o test_tty_functions
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/tty'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/users_groups'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_getpwent.c ../libtlpi.a   -o t_getpwent
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_getpwnam_r.c ../libtlpi.a   -o t_getpwnam_r
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter   -c -o check_password.o check_password.c
 cc -o check_password check_password.o  ../libtlpi.a -lcrypt
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/users_groups'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/vdso'
 cc -o vdso_gettimeofday gettimeofday.c -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter ../libtlpi.a
 cc -DUSE_SYSCALL -o syscall_gettimeofday gettimeofday.c -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter ../libtlpi.a
@@ -440,12 +472,15 @@ make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/v
  
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/vmem'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    memlock.c ../libtlpi.a   -o memlock
+ 
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    madvise_dontneed.c ../libtlpi.a   -o madvise_dontneed
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_mprotect.c ../libtlpi.a   -o t_mprotect
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/vmem'
+ 
 make[1]: Entering directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/xattr'
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    t_setxattr.c ../libtlpi.a   -o t_setxattr
 cc -std=c99 -D_XOPEN_SOURCE=600 -D_DEFAULT_SOURCE -g -I../lib -pedantic -Wall -W -Wmissing-prototypes -Wno-sign-compare -Wimplicit-fallthrough -Wno-unused-parameter    xattr_view.c ../libtlpi.a   -o xattr_view
 make[1]: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist/xattr'
+ 
 make: Leaving directory '/home/linkachu/linuxProgrammingInterface/tlpi-dist'
  

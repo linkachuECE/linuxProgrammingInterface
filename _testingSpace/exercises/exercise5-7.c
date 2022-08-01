@@ -1,7 +1,7 @@
 #define _FILE_OFFSET_BITS 64
 #include <sys/stat.h>
 #include <fcntl.h>
-#include "../lib/tlpi_hdr.h"
+#include "../../lib/tlpi_hdr.h"
 
 struct myIovec{
     void* iov_base;
@@ -37,7 +37,7 @@ ssize_t myReadv(int fd, struct myIovec *iov, int iovcnt){
     int total = 0;
     for(int i = 0; i < iovcnt; i++){
         int result = read(fd, iov[i].iov_base, iov[i].iov_len);
-        printf("Text in buffer %d:\n\"%s\"\n\n", i, (char*)iov[i].iov_base);
+        printf("Text in buffer %d:\n\"%s\"\n\n", i, iov[i].iov_base);
         if (result == -1){
             perror("read");
             exit(EXIT_FAILURE);
