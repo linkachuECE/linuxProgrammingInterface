@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 31 17:44:43 2022
+# Make data base, printed on Mon Aug  1 15:28:03 2022
 
 # Variables
 
@@ -27,13 +27,13 @@ WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/linkachu/linuxProgrammingInterface/tlpi-dist
+CURDIR := /home/linkachu/linuxProgrammingInterface
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /mnt/c/Program Files/Microsoft VS Code/bin/code
+_ = /mnt/c/Users/ebraun/AppData/Local/Programs/Microsoft VS Code/bin/code
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # 'override' directive
@@ -43,19 +43,17 @@ XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-VSCODE_CWD = /mnt/c/Program Files/Microsoft VS Code
+VSCODE_CWD = /mnt/c/Users/ebraun/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # makefile (from 'Makefile', line 36)
 BUILD_DIRS = ${DIRS}
 # environment
-PATH = /home/linkachu/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/home/linkachu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/MATLAB/R2021b/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/egbra/AppData/Local/Microsoft/WindowsApps:/snap/bin
-# environment
-XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/TortoiseSVN/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/otii:/mnt/c/Program Files (x86)/P-CAD 2006 Viewer/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/ebraun/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/ebraun/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/ebraun/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ebraun/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/dfu-util:/mnt/c/Users/ebraun/AppData/Local/particle/bin:/mnt/c/OpenSSL-Win32/bin:/snap/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-d125a3c9-4a34-4027-808e-3f3d36154f06.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a002ef31-2018-49a1-af7d-32d018177bd7.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -63,17 +61,11 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = :0
-# environment
-PWD = /home/linkachu/linuxProgrammingInterface/tlpi-dist
+PWD = /home/linkachu/linuxProgrammingInterface
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/9_interop
-# environment
-PULSE_SERVER = /mnt/wslg/PulseServer
-# environment
-WT_SESSION = c0942758-09d4-49ed-9b50-0f59cdec1d1f
+WT_SESSION = 1c2e7faf-af1f-405f-b8b7-f8044fd476ec
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -107,7 +99,7 @@ NAME = Code
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/egbra/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/ebraun/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # default
 MAKE_COMMAND := make
 # default
@@ -140,8 +132,6 @@ HOSTTYPE = x86_64
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# environment
-WAYLAND_DISPLAY = wayland-0
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -155,7 +145,7 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 # environment
 MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=4/106=4%
+# Load=67/1024=7%, Rehash=0, Collisions=4/101=4%
 
 # Pattern-specific Variable Values
 
@@ -163,7 +153,7 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 2080, inode 52100): 68 files, no impossibilities.
+# . (device 2, inode 12103423998798556): 68 files, no impossibilities.
 
 # 68 files, no impossibilities in 1 directories.
 
@@ -212,7 +202,8 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-09 01:39:49
+ 
+#  Last modified 2022-08-01 09:20:29.5026358
 #  File has been updated.
 #  Successfully updated.
 
@@ -250,6 +241,6 @@ allgen:
 # strcache performance: lookups = 84 / hit rate = 10%
 # hash-table stats:
 # Load=75/8192=1%, Rehash=0, Collisions=1/84=1%
-# Finished Make data base on Sun Jul 31 17:44:43 2022
+# Finished Make data base on Mon Aug  1 15:28:03 2022
 
  
