@@ -1,2 +1,5 @@
 all:
-	gcc testing.c -o ./bin/testing
+	gcc -g -I../lib testing.c -o ./bin/testing
+
+clean:
+	rm bin/*
