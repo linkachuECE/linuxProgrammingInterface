@@ -7,8 +7,8 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                "-I${workspaceFolder}/lib",
                 "${file}",
-                "${workspaceFolder}/lib/error_functions.c",
                 "-o",
                 "${fileDirname}/bin/${fileBasenameNoExtension}"
             ],
