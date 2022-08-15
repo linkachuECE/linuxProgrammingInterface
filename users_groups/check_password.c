@@ -30,67 +30,26 @@
 #include <shadow.h>
 #include "tlpi_hdr.h"
 
-int
-main(int argc, char *argv[])
-{
-    char *username, *password, *encrypted, *p;
-    struct passwd *pwd;
-    struct spwd *spwd;
-    Boolean authOk;
-    size_t len;
-    long lnmax;
+struct passwd *myGetpwnam(const char* nam){
+    struct passwd *currPasswd;
 
-    /* Determine size of buffer required for a username, and allocate it */
-
-    lnmax = sysconf(_SC_LOGIN_NAME_MAX);
-    if (lnmax == -1)                    /* If limit is indeterminate */
-        lnmax = 256;                    /* make a guess */
-
-    username = malloc(lnmax);
-    if (username == NULL)
-        errExit("malloc");
-
-    printf("Username: ");
-    fflush(stdout);
-    if (fgets(username, lnmax, stdin) == NULL)
-        exit(EXIT_FAILURE);             /* Exit on EOF */
-
-    len = strlen(username);
-    if (username[len - 1] == '\n')
-        username[len - 1] = '\0';       /* Remove trailing '\n' */
-
-    /* Look up password and shadow password records for username */
-
-    pwd = getpwnam(username);
-    if (pwd == NULL)
-        fatal("couldn't get password record");
-    spwd = getspnam(username);
-    if (spwd == NULL && errno == EACCES)
-        fatal("no permission to read shadow password file");
-
-    if (spwd != NULL)           /* If there is a shadow password record */
-        pwd->pw_passwd = spwd->sp_pwdp;     /* Use the shadow password */
-
-    password = getpass("Password: ");
-
-    /* Encrypt password and erase cleartext version immediately */
-
-    encrypted = crypt(password, pwd->pw_passwd);
-    for (p = password; *p != '\0'; )
-        *p++ = '\0';
-
-    if (encrypted == NULL)
-        errExit("crypt");
-
-    authOk = strcmp(encrypted, pwd->pw_passwd) == 0;
-    if (!authOk) {
-        printf("Incorrect password\n");
-        exit(EXIT_FAILURE);
+    currPasswd = getpwent();
+    while(currPasswd != NULL){
+        if (strcmp(currPasswd->pw_name, nam) == 0)
+            break;
+        currPasswd = getpwent();
     }
 
-    printf("Successfully authenticated: UID=%ld\n", (long) pwd->pw_uid);
+    return currPasswd;
+}
 
-    /* Now do authenticated work... */
+int main(int argc, char *argv[]){
+    struct passwd* mypasswd = myGetpwnam("LINKIDO");
+
+    if(mypasswd == NULL)
+        puts("Username not found");
+    else
+        printf("%s has user ID %d\n", mypasswd->pw_name, mypasswd->pw_uid);
 
     exit(EXIT_SUCCESS);
 }
